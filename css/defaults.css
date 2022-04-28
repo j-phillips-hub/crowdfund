@@ -1,0 +1,72 @@
+:root {
+  --clr-body: hsl(0, 0%, 95%);
+  --clr-paragraph: hsl(0, 0%, 48%);
+  --clr-accent: hsl(176, 50%, 47%);
+  --clr-dark-cyan: hsl(176, 72%, 28%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-hr: hsla(0, 0%, 0%, .15);
+  --clr-dark-gray: hsl(0, 0%, 18%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} 
+
+body {
+  background-color: var(--clr-body);
+  font-family: 'Commissioner', sans-serif;
+  font-size: 0.875rem;
+}
+
+main {margin: 0 1.5rem;}
+
+ul {list-style: none;}
+
+a {text-decoration: none;}
+
+h1,
+h2,
+h3 {color: var(--clr-black);}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  padding: 40px 24px 16px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  border-radius: 0.5rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 2.09375rem;
+  font-weight: 700;
+}
+
+.btn:not(:disabled):not(.btn--disabled),
+button:not(:disabled):not(.btn--disabled) {cursor: pointer;}
+
+.btn--primary {
+  background-color: var(--clr-accent);
+  color: var(--clr-white);
+}
+
+.btn--disabled {background-color: var(--clr-paragraph);}
+
+.btn--large {
+  font-size: 1rem;
+  padding: 1.2em 2.3em;
+}
+
+.btn--md {
+  font-size: 0.875rem;
+  padding: 1rem 2rem;
+}
