@@ -50,7 +50,7 @@
     <!-- Master Craft -->
     <section class="mastercraft">
       <div class="mastercraft__logo">
-        <img src="./images/logo-mastercraft.svg" alt="Black circle with letter M inside">
+        <img src="./images/logo-mastercraft.svg" alt="">
       </div>
 
 
@@ -63,9 +63,9 @@
       </p>
 
       <div class="mastercraft__footer">
-        <button class="btn btn--primary btn--large">Back this project</button>
+        <button class="btn btn--primary btn--lrg">Back this project</button>
         <div class="mastercraft__bookmark">
-          <img src="./images/icon-bookmark.svg" alt="Bookmark">
+          <img src="./images/icon-bookmark.svg" alt="Bookmark Mastercraft bamboo monitor riser">
         </div>
       </div>
     </section>
@@ -146,7 +146,7 @@
             </header>
 
             <div>
-              <button class="btn btn--primary btn--md">Select Reward</button>
+              <button id="bamboo" class="btn btn--primary btn--md">Select Reward</button>
             </div>
           </div>
         </div>
@@ -212,11 +212,11 @@
   </main>
 
   <!-- Selection modal start -->
-  <section class="back-project">
+  <section id="back" class="back-project" data-animation="zoomInOut">
     <div class="container">
       <header class="back-project__header">
         <h2 class="back-project__title">Back this project</h2>
-        <div>
+        <div class="back-project__close">
           <img src="./images/icon-close-modal.svg" alt="Close Modal">
         </div>
       </header>
@@ -267,12 +267,13 @@
         </header>
       </div>
 
-      <div class="card card--popup">
+      <div class="card card--popup">    
         <div class="card--popup__flex-wrapper">
           <p class="card--popup__description">Enter your pledge</p>
-          <label for="card--popup__pledge-amount"></label>
-          <input type="number" name="pledge-amount" id="pledgeAmount" placeholder="$25">
-          <button class="btn btn--primary btn--md">Continue</button>
+          <label for="card--popup__pledge-amount">
+            <input class="card--popup__input" type="number" name="pledge-amount" id="pledgeAmount" placeholder="$25">
+            <button class="btn btn--primary btn--sm">Continue</button>
+          </label>
         </div>
       </div>
 
@@ -301,11 +302,14 @@
       </div>
 
       <div class="card card--popup">
+        
         <div class="card--popup__flex-wrapper">
           <p class="card--popup__description">Enter your pledge</p>
-          <label for="card--popup__pledge-amount"></label>
-          <input type="number" name="pledge-amount" id="pledgeAmount" placeholder="$75">
-          <button class="btn btn--primary btn--md">Continue</button>
+          <label for="card--popup__pledge-amount">
+            <input class="card--popup__input" type="number" name="pledge-amount" id="pledgeAmount" placeholder="$75">
+            <button class="btn btn--primary btn--sm">Continue</button>
+          </label>
+        
         </div>
       </div>
 
@@ -337,9 +341,10 @@
       <div class="card card--popup card--out-of-stock">
         <div class="card--popup__flex-wrapper">
           <p class="card--popup__description">Enter your pledge</p>
-          <label for="card--popup__pledge-amount"></label>
-          <input type="number" name="pledge-amount" id="pledgeAmount" placeholder="$200">
-          <button class="btn btn--primary btn--md btn--disabled">Continue</button>
+          <label for="card--popup__pledge-amount">
+            <input class="card--popup__input" type="number" name="pledge-amount" id="pledgeAmount" placeholder="$200">
+            <button class="btn btn--primary btn--sm btn--disabled">Continue</button>
+          </label>
         </div>
       </div>
     </div>

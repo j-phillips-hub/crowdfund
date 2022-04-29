@@ -4,6 +4,7 @@
   --clr-accent: hsl(176, 50%, 47%);
   --clr-dark-cyan: hsl(176, 72%, 28%);
   --clr-black: hsl(0, 0%, 0%);
+  --clr-modal-open: hsla(0, 0%, 0%, .5);
   --clr-hr: hsla(0, 0%, 0%, .15);
   --clr-dark-gray: hsl(0, 0%, 18%);
   --clr-white: hsl(0, 0%, 100%);
@@ -38,6 +39,11 @@ img {
   height: 100%;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance: none;}
+
+input[type="number"] {-moz-appearance: textfield;}
+
 .container {
   padding: 40px 24px 16px;
   background-color: white;
@@ -61,12 +67,18 @@ button:not(:disabled):not(.btn--disabled) {cursor: pointer;}
 
 .btn--disabled {background-color: var(--clr-paragraph);}
 
-.btn--large {
+.btn--lrg {
   font-size: 1rem;
   padding: 1.2em 2.3em;
 }
 
 .btn--md {
   font-size: 0.875rem;
-  padding: 1rem 2rem;
+  padding: 1em 2.15em;
 }
+
+.btn--sm {
+  font-size: 0.875rem;
+  padding: 1em 1em;
+}
+
