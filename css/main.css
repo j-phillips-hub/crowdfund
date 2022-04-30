@@ -224,10 +224,7 @@
   opacity: 0;
 }
 
-.is-visible {
-  visibility: visible;
-  opacity: 1;
-}
+
 
 [data-animation='zoomInOut'] {transform: scale(0.2);}
 
@@ -351,3 +348,8 @@
 .thankyou__header {margin: 1.5rem 0;}
 
 .thankyou__btn {margin: 1.9375rem 0 1.5rem;}
+
+.is-visible {
+  visibility: visible;
+  opacity: 1;
+}

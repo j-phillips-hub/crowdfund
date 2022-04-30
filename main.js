@@ -26,7 +26,8 @@ for (const elm of openModal) {
 // Closes pledge container on X
 for (const elm of closeModal) {
   elm.addEventListener('click', function() {
-    document.getElementById('selectReward').classList.remove('is-visible');
+    const modalId = this.dataset.close;
+    document.getElementById(modalId).classList.remove('is-visible');
   });
 }
 
