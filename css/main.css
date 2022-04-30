@@ -94,12 +94,6 @@
   margin: 0 auto 1rem;
 }
 
-.mastercraft__description {
-  color: var(--clr-paragraph);
-  font-size: 0.875rem;
-  line-height: 24px;
-}
-
 .mastercraft__footer {
   display: flex;
   justify-content: center;
@@ -169,11 +163,7 @@
 
 .about__title{font-size: 1.125rem;}
 
-.about__description {
-  color: var(--clr-paragraph);
-  margin-bottom: 2.1875rem;
-  line-height: 24px;
-}
+.about__description {margin-bottom: 2.1875rem;}
 
 .card {
   background-color: transparent;
@@ -196,11 +186,7 @@
   font-weight: 500;
 }
 
-.card__description {
-  color: var(--clr-paragraph);
-  line-height: 24px;
-  margin-top: 1.5rem;
-}
+.card__description {margin-top: 1.5rem;}
 
 .card__header {
   display: flex;
@@ -216,7 +202,6 @@
 .card__products-num--big {font-size: 2rem;}
 
 .card__products-left {
-  color: var(--clr-paragraph);
   font-size: 0.9375rem;
   font-weight: 400;
 }
@@ -237,20 +222,16 @@
   background: white;
   visibility: hidden;
   opacity: 0;
-  /* mix-blend-mode: normal;
-  opacity: 0.5; */
-
 }
 
-.back-project--visible {
+.is-visible {
   visibility: visible;
   opacity: 1;
 }
 
 [data-animation='zoomInOut'] {transform: scale(0.2);}
 
-
-[data-animation='zoomInOut'].back-project--visible {transform: none;}
+[data-animation='zoomInOut'].is-visible {transform: none;}
 
 .back-project__header {
   display: flex;
@@ -258,27 +239,17 @@
   justify-content: space-between;
 }
 
-.back-project__title {
-  font-size: 1.125rem;
-  line-height: 18px;
-}
+.back-project__title {font-size: 1.125rem;}
 
 .back-project__close {
   transition: all 0.25s ease-in;
   cursor: pointer;
 }
 
-.back-project__close:hover {
-  transform: scale(1.2);
-}
+.back-project__close:hover {transform: scale(1.2);}
 
 .back-project__header,
 .back-project__description {margin-bottom: 1.5rem;}
-
-.back-project__description {
-  color: var(--clr-paragraph);
-  line-height: 24px;
-}
 
 .card__radio {
   -webkit-appearance: none;
@@ -323,14 +294,12 @@
 }
 
 .card--popup {
-  /* display: none; */
   border-top: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
 .card--popup__description {
-  color: var(--clr-paragraph);
   text-align: center;
 }
 
@@ -355,3 +324,30 @@
   border-radius: 33.5px;
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
+
+/* -------------------------------------------------------------------------- */
+/*                               THANKYOU MODAL                              */
+/* -------------------------------------------------------------------------- */
+
+.thankyou {
+  background: var(--clr-white);
+  text-align: center;
+  padding: 32px 24px 40px;
+  position: fixed;
+  top: 143px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.35s ease-in;
+  visibility: hidden;
+  opacity: 0;
+}  
+
+.thankyou__img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.thankyou__header {margin: 1.5rem 0;}
+
+.thankyou__btn {margin: 1.9375rem 0 1.5rem;}

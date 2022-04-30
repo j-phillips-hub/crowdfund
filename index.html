@@ -146,7 +146,7 @@
             </header>
 
             <div>
-              <button id="bamboo" class="btn btn--primary btn--md">Select Reward</button>
+              <button class="btn btn--primary btn--md" data-open="selectReward">Select Reward</button>
             </div>
           </div>
         </div>
@@ -163,8 +163,9 @@
           </div>
 
           <p class="card__description">
-            You get a Black Special Edition computer stand and a personal thank you.
-            You’ll be added to our Backer member list. Shipping is included.
+            You get a Black Special Edition computer
+            stand and a personal thank you. You’ll be
+            added to our Backer member list. Shipping is included.
           </p>
 
           <div class="card__flex-wrapper">
@@ -174,7 +175,7 @@
             </header>
 
             <div>
-              <button class="btn btn--primary btn--md">Select Reward</button>
+              <button class="btn btn--primary btn--md" data-open="selectReward">Select Reward</button>
             </div>
           </div>
         </div>
@@ -212,12 +213,12 @@
   </main>
 
   <!-- Selection modal start -->
-  <section id="back" class="back-project" data-animation="zoomInOut">
+  <section id="selectReward" class="back-project" data-animation="zoomInOut">
     <div class="container">
       <header class="back-project__header">
         <h2 class="back-project__title">Back this project</h2>
         <div class="back-project__close">
-          <img src="./images/icon-close-modal.svg" alt="Close Modal">
+          <img src="./images/icon-close-modal.svg" alt="Close Modal" data-close="closeModal">
         </div>
       </header>
       <p class="back-project__description">
@@ -267,12 +268,12 @@
         </header>
       </div>
 
-      <div class="card card--popup">    
+      <div class="card card--popup">
         <div class="card--popup__flex-wrapper">
           <p class="card--popup__description">Enter your pledge</p>
           <label for="card--popup__pledge-amount">
             <input class="card--popup__input" type="number" name="pledge-amount" id="pledgeAmount" placeholder="$25">
-            <button class="btn btn--primary btn--sm">Continue</button>
+            <button class="btn btn--primary btn--sm" data-open="thankYou" data-pledge="pledge-continue">Continue</button>
           </label>
         </div>
       </div>
@@ -302,14 +303,13 @@
       </div>
 
       <div class="card card--popup">
-        
+
         <div class="card--popup__flex-wrapper">
           <p class="card--popup__description">Enter your pledge</p>
           <label for="card--popup__pledge-amount">
             <input class="card--popup__input" type="number" name="pledge-amount" id="pledgeAmount" placeholder="$75">
-            <button class="btn btn--primary btn--sm">Continue</button>
+            <button class="btn btn--primary btn--sm" data-open="thankYou" data-pledge="pledge-continue">Continue</button>
           </label>
-        
         </div>
       </div>
 
@@ -350,14 +350,25 @@
     </div>
   </section>
 
-  <!-- Success modal start -->
-  <div>
-    Thanks for your support!
-    Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-    an email once our campaign is completed.
-    Got it!
-  </div>
-  <!-- Success modal end -->
+  <!-- Thankyou modal start -->
+  <section id="thankYou" class="thankyou" data-animation="zoomInOut">
+    <div class="container">
+      <img src="./images/icon-check.svg" alt="" loading="lazy">
+
+      <header class="thankyou__header">
+        <h2>Thanks for your support!</h2>
+      </header>
+
+      <p class="thankyou__description">
+        Your pledge brings us one step closer to sharing
+        Mastercraft Bamboo Monitor Riser worldwide. You will get
+        an email once our campaign is completed.
+      </p>
+
+      <button class="thankyou__btn btn btn--primary btn--md" data-close="thankYou">Got it!</button>
+    </div>
+  </section>
+  <!-- Thankyou model end -->
 
 </body>
 
