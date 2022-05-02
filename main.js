@@ -59,11 +59,11 @@ for (const elm of backProjectButtons) {
 }
 
 // Date Countdown
-const countDownDate = new Date('June 27, 2022 17:30:00').getTime(); // End Date Here
+const countDownDate = new Date('June 27, 2022 18:52:25').getTime(); // End Date
 const daysLeft = document.getElementById('daysLeft');
 
 const x = setInterval (function() {
-  const todaysDate = new Date('May 2, 2022 16:58:00').getTime(); // Todays Date Here
+  const todaysDate = new Date().getTime(); // Todays Date
   let countDown = countDownDate - todaysDate;
 
   // Time calculations for days, hours, minutes and seconds
@@ -71,5 +71,5 @@ const x = setInterval (function() {
   const hours = Math.floor((countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
-  document.getElementById('daysLeft').innerHTML = seconds;
+  document.getElementById('daysLeft').innerHTML = days;
 });
