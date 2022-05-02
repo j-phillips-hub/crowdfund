@@ -5,7 +5,7 @@
 }
 
 /* -------------------------------------------------------------------------- */
-/*                              STARTS TOGGLE NAV                              */
+/*                              STARTS TOGGLE NAV                             */
 /* -------------------------------------------------------------------------- */
 
 .nav-toggle:checked ~ .nav {padding: 2rem 1.5rem 0;}
@@ -23,12 +23,6 @@
 .nav-toggle:checked ~ .nav .nav__list-link {
   color: var(--clr-black);
   margin-left: 24px;
-}
-
-.toggle-opacity {
-  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
-  mix-blend-mode: normal;
-  opacity: 0.6;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -168,7 +162,7 @@
 .card {
   background-color: transparent;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 8px;
 }
@@ -219,12 +213,11 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: white;
+  background: var(--clr-white);
   visibility: hidden;
   opacity: 0;
+  border-radius: 8px;
 }
-
-
 
 [data-animation='zoomInOut'] {transform: scale(0.2);}
 
@@ -239,6 +232,8 @@
 .back-project__title {font-size: 1.125rem;}
 
 .back-project__close {
+  width: 0.875rem;
+  height: 0.875rem;
   transition: all 0.25s ease-in;
   cursor: pointer;
 }
@@ -285,20 +280,21 @@
 .card__products-num--small {font-size: 1.125rem;}
 
 .card--pledge {
-  margin-bottom: 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 .card--popup {
+  display: none;
+  margin: 0;
   border-top: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.card--popup__description {
-  text-align: center;
-}
+.card--popup-visible {display: block;}
+
+.card--popup__description {text-align: center;}
 
 .card--popup__flex-wrapper {
   display: flex;
@@ -327,7 +323,7 @@
 /* -------------------------------------------------------------------------- */
 
 .thankyou {
-  background: var(--clr-white);
+  background-color: var(--clr-white);
   text-align: center;
   padding: 32px 24px 40px;
   position: fixed;
@@ -352,4 +348,10 @@
 .is-visible {
   visibility: visible;
   opacity: 1;
+}
+
+.bg-opacity {
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
+  mix-blend-mode: normal;
+  opacity: 0.4;
 }

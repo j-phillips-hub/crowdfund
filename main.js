@@ -1,40 +1,47 @@
-const toggleNav = document.getElementById('toggleNav');
-const body = document.getElementById('body');
-const navList = document.getElementById('navList');
-
 const modalOpen = '[data-open]';
 const modalClose = '[data-close]';
-const dataPledge = '[data-pledge]';
 const openModal = document.querySelectorAll(modalOpen);
 const closeModal = document.querySelectorAll(modalClose);
-const pledgeContinue = document.querySelectorAll(dataPledge);
+const bgOpacity = document.getElementById('bgOpac');
 
-// Toggles mobile nav
-toggleNav.addEventListener('click', function() {
-  body.classList.toggle('toggle-opacity');
-  navList.style.opacity = '1';
-});
+const bambooRadio = document.getElementById('bambooRadio');
+const bambooPopup = document.getElementById('bambooPopup');
+const cardRadio = document.getElementsByClassName('card__radio');
+const blackEditionRadio = document.getElementById('blackEditionRadio');
+const blackEditionPopup = document.getElementById('blackEditionPopup');
 
-// Opens pledge container on select reward
+// Opens pledge container
 for (const elm of openModal) {
-  elm.addEventListener('click', function() {
+  elm.addEventListener('click', function () {
     const modalId = this.dataset.open;
     document.getElementById(modalId).classList.add('is-visible');
+    bgOpacity.classList.toggle('bg-opacity');
   });
 }
 
-// Closes pledge container on X
+// Closes pledge container
 for (const elm of closeModal) {
-  elm.addEventListener('click', function() {
+  elm.addEventListener('click', function () {
     const modalId = this.dataset.close;
     document.getElementById(modalId).classList.remove('is-visible');
+    bgOpacity.classList.toggle('bg-opacity');
   });
 }
 
-// Closes pledge container on continue
-for (const elm of pledgeContinue) {
-  elm.addEventListener('click', function(){
-    document.getElementById('selectReward').classList.remove('is-visible');
+// Opens/Closes card popup
+for (const radio of cardRadio) {
+  radio.addEventListener('click', function () {
+    if (bambooRadio.checked) {
+      bambooPopup.classList.add('card--popup-visible');
+      blackEditionPopup.classList.remove('card--popup-visible');
+    } else if (blackEditionRadio.checked) {
+      blackEditionPopup.classList.add('card--popup-visible');
+      bambooPopup.classList.remove('card--popup-visible');
+    } else {
+      bambooPopup.classList.remove('card--popup-visible');
+      blackEditionPopup.classList.remove('card--popup-visible');
+    }
   });
 }
+
 
