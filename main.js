@@ -4,9 +4,9 @@ const openModal = document.querySelectorAll(modalOpen);
 const closeModal = document.querySelectorAll(modalClose);
 const bgOpacity = document.getElementById('bgOpac');
 
+const cardRadio = document.getElementsByClassName('card__radio');
 const bambooRadio = document.getElementById('bambooRadio');
 const bambooPopup = document.getElementById('bambooPopup');
-const cardRadio = document.getElementsByClassName('card__radio');
 const blackEditionRadio = document.getElementById('blackEditionRadio');
 const blackEditionPopup = document.getElementById('blackEditionPopup');
 
@@ -44,16 +44,32 @@ for (const radio of cardRadio) {
   });
 }
 
-// Updates total backers on 
-const backProject = document.getElementById('backProject');
+// Updates total backers on click
+const backProject = '[data-backProject]';
+const backProjectButtons = document.querySelectorAll(backProject);
+
 const totalBackers = document.getElementById('totalBackers');
 let count = parseInt(totalBackers.innerHTML.replace(/,/, ''));
 
-backProject.addEventListener('click', function () {
-  count += 1;
-  totalBackers.innerHTML = count;
+for (const elm of backProjectButtons) {
+  elm.addEventListener('click', function () {
+    count += 1;
+    totalBackers.innerHTML = count;
+  });
+}
+
+// Date Countdown
+const countDownDate = new Date('June 27, 2022 17:30:00').getTime(); // End Date Here
+const daysLeft = document.getElementById('daysLeft');
+
+const x = setInterval (function() {
+  const todaysDate = new Date('May 2, 2022 16:58:00').getTime(); // Todays Date Here
+  let countDown = countDownDate - todaysDate;
+
+  // Time calculations for days, hours, minutes and seconds
+  const days = Math.floor(countDown / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
+  document.getElementById('daysLeft').innerHTML = seconds;
 });
-
-
-
-

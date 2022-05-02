@@ -59,7 +59,7 @@
         </p>
 
         <div class="mastercraft__footer">
-          <button id="backProject" class="btn btn--primary btn--lrg">Back this project</button>
+          <button class="btn btn--primary btn--lrg" data-backProject="">Back this project</button>
           <img class="mastercraft__bookmark" src="./images/icon-bookmark.svg"
             alt="Bookmark Mastercraft bamboo monitor riser">
         </div>
@@ -78,7 +78,7 @@
 
           <div>
             <header class="backers__header">
-              <h2 id="totalBackers" class="backers__total">5,007</h2>
+              <h2 id="totalBackers" class="backers__total">0</h2>
             </header>
             <p class="backers__subheader">total backers</p>
             <hr class="backers__rule">
@@ -86,7 +86,7 @@
 
           <div>
             <header class="backers__header">
-              <h2 class="backers__total">56</h2>
+              <h2 id="daysLeft" class="backers__total"></h2>
             </header>
             <p class="backers__subheader">days left</p>
           </div>
@@ -207,6 +207,7 @@
       </section>
     </main>
   </div>
+
   <!-- Selection modal start -->
   <section id="selectReward" class="back-project" data-animation="zoomInOut">
     <div class="container">
@@ -267,7 +268,7 @@
           <p class="card--popup__description">Enter your pledge</p>
           <label for="card--popup__pledge-amount">
             <input class="card--popup__input" type="number" name="pledge-amount" placeholder="$25">
-            <button class="btn btn--primary btn--sm" data-open="thankYou" data-close="selectReward">Continue</button>
+            <button class="btn btn--primary btn--sm" data-open="thankYou" data-close="selectReward" data-backProject="">Continue</button>
           </label>
         </div>
       </div>
@@ -301,7 +302,7 @@
           <p class="card--popup__description">Enter your pledge</p>
           <label for="card--popup__pledge-amount">
             <input class="card--popup__input" type="number" name="pledge-amount" id="pledgeAmount" placeholder="$75">
-            <button class="btn btn--primary btn--sm" data-open="thankYou" data-close="selectReward">Continue</button>
+            <button class="btn btn--primary btn--sm" data-open="thankYou" data-close="selectReward" data-backProject="">Continue</button>
           </label>
         </div>
       </div>
