@@ -44,4 +44,16 @@ for (const radio of cardRadio) {
   });
 }
 
+// Updates total backers on 
+const backProject = document.getElementById('backProject');
+const totalBackers = document.getElementById('totalBackers');
+let count = parseInt(totalBackers.innerHTML.replace(/,/, ''));
+
+backProject.addEventListener('click', function () {
+  count += 1;
+  totalBackers.innerHTML = count;
+});
+
+
+
 
