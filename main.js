@@ -16,6 +16,7 @@ for (const elm of openModal) {
     const modalId = this.dataset.open;
     document.getElementById(modalId).classList.add('is-visible');
     bgOpacity.classList.toggle('bg-opacity');
+    window.scrollTo(0, 0);
   });
 }
 
@@ -55,6 +56,7 @@ for (const elm of backProjectButtons) {
   elm.addEventListener('click', function () {
     count += 1;
     totalBackers.innerHTML = count;
+    window.scrollTo(0, 0);
   });
 }
 
