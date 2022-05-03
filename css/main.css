@@ -217,6 +217,7 @@
   visibility: hidden;
   opacity: 0;
   border-radius: 8px;
+  /* overflow: hidden; */
 }
 
 [data-animation='zoomInOut'] {transform: scale(0.2);}
