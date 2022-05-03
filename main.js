@@ -44,7 +44,7 @@ for (const radio of cardRadio) {
   });
 }
 
-// Updates total backers on click
+// Updates total backers / Amount Donated
 const backProject = '[data-backProject]';
 const backProjectButtons = document.querySelectorAll(backProject);
 
@@ -72,4 +72,6 @@ const x = setInterval (function() {
   const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
   document.getElementById('daysLeft').innerHTML = days;
-});
+}, 1000);
+
+
