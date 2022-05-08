@@ -117,7 +117,7 @@
             USB sticks to be stored under the stand.
           </p>
 
-          <div class="card">
+          <div id="bambooCard" class="card">
             <div class="card__flex-wrapper">
               <header class="card__header">
                 <h2 class="card__title">Bamboo Stand</h2>
@@ -141,12 +141,12 @@
               </header>
 
               <div>
-                <button class="btn btn--primary btn--md" data-open="selectReward">Select Reward</button>
+                <button id="bambooRewardBtn" class="btn btn--primary btn--md" type="submit" data-open="selectReward">Select Reward</button>
               </div>
             </div>
           </div>
 
-          <div class="card">
+          <div id="blackEditionCard" class="card">
             <div class="card__flex-wrapper">
               <header class="card__header">
                 <h2 class="card__title">Black Edition Stand</h2>
@@ -170,12 +170,12 @@
               </header>
 
               <div>
-                <button class="btn btn--primary btn--md" data-open="selectReward">Select Reward</button>
+                <button id="blackEditionRewardBtn" class="btn btn--primary btn--md" type="submit" data-open="selectReward">Select Reward</button>
               </div>
             </div>
           </div>
 
-          <div class="card card--out-of-stock">
+          <div id="mahoganyCard" class="card">
             <div class="card__flex-wrapper">
               <header class="card__header">
                 <h2 class="card__title">Mahogany Special Edition</h2>
@@ -194,12 +194,12 @@
 
             <div class="card__flex-wrapper">
               <header class="card__header">
-                <h3 class="card__products-num card__products-num--big">0</h3>
+                <h3 class="card__products-num card__products-num--big" data-mahoganyAmountLeft>1</h3>
                 <span class="card__products-left">left</span>
               </header>
 
               <div>
-                <button class="btn btn--primary btn--md btn--disabled">Out of Stock</button>
+                <button id="mahoganyRewardBtn" class="btn btn--primary btn--md" type="submit" data-open="selectReward">Select Reward</button>
               </div>
             </div>
           </div>
@@ -238,7 +238,7 @@
         </p>
       </div>
 
-      <div class="card card--pledge">
+      <div id="bambooModalCard" class="card card--pledge">
         <div class="card__flex-wrapper">
           <header class="card__header">
             <label class="card__label" for="pledge">
@@ -273,7 +273,7 @@
         </div>
       </div>
 
-      <div class="card card--pledge">
+      <div id="blackEditionModalCard" class="card card--pledge">
         <div class="card__flex-wrapper">
           <header class="card__header">
             <label class="card__label" for="pledge">
@@ -307,7 +307,7 @@
         </div>
       </div>
 
-      <div class="card card--pledge card--out-of-stock">
+      <div id="mahoganyModalCard" class="card card--pledge">
         <div class="card__flex-wrapper">
           <header class="card__header">
             <label class="card__label" for="pledge">
@@ -327,17 +327,17 @@
         </p>
 
         <header class="card__header">
-          <h3 class="card__products-num card__products-num--small">0</h3>
+          <h3 class="card__products-num card__products-num--small" data-mahoganyAmountLeft="">1</h3>
           <span class="card__products-left">left</span>
         </header>
       </div>
 
-      <div class="card card--popup card--out-of-stock">
+      <div id="mahoganyPopup" class="card card--popup">
         <div class="card--popup__flex-wrapper">
           <p class="card--popup__description">Enter your pledge</p>
           <label for="card--popup__pledge-amount">
-            <input class="card--popup__input" type="number" name="pledge-amount" id="pledgeAmount" placeholder="$200">
-            <button class="btn btn--primary btn--sm btn--disabled">Continue</button>
+            <input id="mahoganyInput" class="card--popup__input" type="text" name="pledge-amount" placeholder="$200" data-input="">
+            <button class="btn btn--primary btn--sm" data-open="thankYou" data-close="selectReward" data-backMahoganyProject="">Continue</button>
           </label>
         </div>
       </div>

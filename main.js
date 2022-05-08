@@ -9,6 +9,8 @@ const bambooRadio = document.getElementById('bambooRadio');
 const bambooPopup = document.getElementById('bambooPopup');
 const blackEditionRadio = document.getElementById('blackEditionRadio');
 const blackEditionPopup = document.getElementById('blackEditionPopup');
+const mahoganyRadio = document.getElementById('mahoganyRadio');
+const mahoganyPopup = document.getElementById('mahoganyPopup');
 
 // Opens pledge container
 for (const elm of openModal) {
@@ -35,12 +37,19 @@ for (const radio of cardRadio) {
     if (bambooRadio.checked) {
       bambooPopup.classList.add('card--popup-visible');
       blackEditionPopup.classList.remove('card--popup-visible');
+      mahoganyPopup.classList.remove('card--popup-visible');
     } else if (blackEditionRadio.checked) {
       blackEditionPopup.classList.add('card--popup-visible');
       bambooPopup.classList.remove('card--popup-visible');
+      mahoganyPopup.classList.remove('card--popup-visible');
+    } else if (mahoganyRadio.checked) {
+      mahoganyPopup.classList.add('card--popup-visible');
+      bambooPopup.classList.remove('card--popup-visible');
+      blackEditionPopup.classList.remove('card--popup-visible');
     } else {
       bambooPopup.classList.remove('card--popup-visible');
       blackEditionPopup.classList.remove('card--popup-visible');
+      mahoganyPopup.classList.remove('card--popup-visible');
     }
   });
 }
@@ -49,6 +58,7 @@ const inputs = '[data-input]';
 const backProjectInputs = document.querySelectorAll(inputs);
 const bambooInput = document.getElementById('bambooInput');
 const blackEditionInput = document.getElementById('blackEditionInput');
+const mahoganyInput = document.getElementById('mahoganyInput');
 
 let inputValue = 0.0; // Default Value
 
@@ -80,12 +90,23 @@ for (const input of backProjectInputs) {
 // BAMBOO BACK PROJECT
 const bambooPrizesLeft = '[data-bambooAmountLeft]';
 const allBambooPrizesLeft = document.querySelectorAll(bambooPrizesLeft);
+const bambooCard = document.getElementById('bambooCard');
+const bambooModalCard = document.getElementById('bambooModalCard');
+const bambooRewardBtn = document.getElementById('bambooRewardBtn');
 
 function subBambooPrizeCount() {
   for (const prize of allBambooPrizesLeft) {
     let bambooPrizeCount = parseInt(prize.innerHTML);
     bambooPrizeCount -= 1;
     prize.innerHTML = bambooPrizeCount;
+
+    if (bambooPrizeCount == 0) {
+      bambooCard.classList.add('card--out-of-stock');
+      bambooModalCard.classList.add('card--out-of-stock');
+      bambooPopup.classList.remove('card--popup-visible');
+      bambooRewardBtn.classList.add('btn--disabled');
+      bambooRewardBtn.innerHTML = 'Out of Stock';
+    }
   }
 }
 
@@ -112,12 +133,23 @@ for (const elm of bambooButtons) {
 // BLACK EDITION BACK PROJECT
 const blackEditionPrizesLeft = '[data-blackEditionAmountLeft]';
 const allBlackEditionPrizesLeft = document.querySelectorAll(blackEditionPrizesLeft);
+const blackEditionCard = document.getElementById('blackEditionCard');
+const blackEditionModalCard = document.getElementById('blackEditionModalCard');
+const blackEditionRewardBtn = document.getElementById('blackEditionRewardBtn');
 
 function subBlackEditionPrizeCount() {
   for (const prize of allBlackEditionPrizesLeft) {
     let blackEditionPrizeCount = parseInt(prize.innerHTML);
     blackEditionPrizeCount -= 1;
     prize.innerHTML = blackEditionPrizeCount;
+
+    if (blackEditionPrizeCount == 0) {
+      blackEditionCard.classList.add('card--out-of-stock');
+      blackEditionModalCard.classList.add('card--out-of-stock');
+      blackEditionPopup.classList.remove('card--popup-visible');
+      blackEditionRewardBtn.classList.add('btn--disabled');
+      blackEditionRewardBtn.innerHTML = 'Out of Stock';
+    }
   }
 }
 
@@ -138,8 +170,43 @@ for (const elm of blackEditionButtons) {
 }
 
 // MAHOGANY BACK PROJECT
+const mahoganyPrizesLeft = '[data-mahoganyAmountLeft]';
+const allMahoganyPrizesLeft = document.querySelectorAll(mahoganyPrizesLeft);
+const mahoganyCard = document.getElementById('mahoganyCard');
+const mahoganyModalCard = document.getElementById('mahoganyModalCard');
+const mahoganyRewardBtn = document.getElementById('mahoganyRewardBtn');
 
+function subMahoganyPrizeCount() {
+  for (const prize of allMahoganyPrizesLeft) {
+    let mahoganyPrizeCount = parseInt(prize.innerHTML);
+    mahoganyPrizeCount -= 1;
+    prize.innerHTML = mahoganyPrizeCount;
 
+    if (mahoganyPrizeCount == 0) {
+      mahoganyCard.classList.add('card--out-of-stock');
+      mahoganyModalCard.classList.add('card--out-of-stock');
+      mahoganyPopup.classList.remove('card--popup-visible');
+      mahoganyRewardBtn.classList.add('btn--disabled');
+      mahoganyRewardBtn.innerHTML = 'Out of Stock';
+    }
+  }
+}
+
+const backMahoganyProject = '[data-backMahoganyProject]';
+const mahoganyButtons = document.querySelectorAll(backMahoganyProject);
+
+for (const elm of mahoganyButtons) {
+  elm.addEventListener('click', function () {
+    count += 1;
+    totalBackers.innerHTML = count;
+    window.scrollTo(0, 0);
+
+    let totalBacked = parseInt(amountBacked.innerHTML) + inputValue;
+    amountBacked.innerHTML = totalBacked;
+
+    subMahoganyPrizeCount();
+  });
+}
 
 
 

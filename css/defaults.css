@@ -65,7 +65,10 @@ button:not(:disabled):not(.btn--disabled) {cursor: pointer;}
   color: var(--clr-white);
 }
 
-.btn--disabled {background-color: var(--clr-paragraph);}
+.btn--disabled {
+  pointer-events: none;
+  background-color: var(--clr-paragraph);
+}
 
 .btn--lrg {
   font-size: 1rem;
