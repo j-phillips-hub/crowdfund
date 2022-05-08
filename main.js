@@ -45,26 +45,112 @@ for (const radio of cardRadio) {
   });
 }
 
-// Updates total backers / Amount Donated
-const backProject = '[data-backProject]';
-const backProjectButtons = document.querySelectorAll(backProject);
+const inputs = '[data-input]';
+const backProjectInputs = document.querySelectorAll(inputs);
+const bambooInput = document.getElementById('bambooInput');
+const blackEditionInput = document.getElementById('blackEditionInput');
 
+let inputValue = 0.0; // Default Value
+
+function validateFloat(s) {
+  RegX = /^[0-9]*\.?[0-9]*$/;
+  return s.match(RegX);
+}
+
+// Get Input Values
+for (const input of backProjectInputs) {
+  input.addEventListener('input', function () {
+    // Replaces comma input with period
+    if (input.value.includes(',')) {
+      input.value = input.value.replace(',', '.');
+    }
+    // Cuts out all invalid characters 
+    if (!validateFloat(input.value)) {
+      input.value = input.value.substring(0, input.value.length - 1);
+    }
+    inputValue = parseFloat(input.value);
+  });
+}
+
+
+
+
+// ADD DISABLED STATE ON 0 LEFT,, ADD MAHOGANY COUNT
+
+// BAMBOO BACK PROJECT
+const bambooPrizesLeft = '[data-bambooAmountLeft]';
+const allBambooPrizesLeft = document.querySelectorAll(bambooPrizesLeft);
+
+function subBambooPrizeCount() {
+  for (const prize of allBambooPrizesLeft) {
+    let bambooPrizeCount = parseInt(prize.innerHTML);
+    bambooPrizeCount -= 1;
+    prize.innerHTML = bambooPrizeCount;
+  }
+}
+
+const backBambooProject = '[data-backBambooProject]';
+const bambooButtons = document.querySelectorAll(backBambooProject);
+
+const amountBacked = document.getElementById('amountBacked');
 const totalBackers = document.getElementById('totalBackers');
-let count = parseInt(totalBackers.innerHTML.replace(/,/, ''));
+let count = parseInt(totalBackers.innerHTML.replace(',', ''));
 
-for (const elm of backProjectButtons) {
+for (const elm of bambooButtons) {
   elm.addEventListener('click', function () {
     count += 1;
     totalBackers.innerHTML = count;
     window.scrollTo(0, 0);
+
+    let totalBacked = parseInt(amountBacked.innerHTML) + inputValue;
+    amountBacked.innerHTML = totalBacked;
+
+    subBambooPrizeCount();
   });
 }
+
+// BLACK EDITION BACK PROJECT
+const blackEditionPrizesLeft = '[data-blackEditionAmountLeft]';
+const allBlackEditionPrizesLeft = document.querySelectorAll(blackEditionPrizesLeft);
+
+function subBlackEditionPrizeCount() {
+  for (const prize of allBlackEditionPrizesLeft) {
+    let blackEditionPrizeCount = parseInt(prize.innerHTML);
+    blackEditionPrizeCount -= 1;
+    prize.innerHTML = blackEditionPrizeCount;
+  }
+}
+
+const backBlackEditionProject = '[data-backBlackEditionProject]';
+const blackEditionButtons = document.querySelectorAll(backBlackEditionProject);
+
+for (const elm of blackEditionButtons) {
+  elm.addEventListener('click', function () {
+    count += 1;
+    totalBackers.innerHTML = count;
+    window.scrollTo(0, 0);
+
+    let totalBacked = parseInt(amountBacked.innerHTML) + inputValue;
+    amountBacked.innerHTML = totalBacked;
+
+    subBlackEditionPrizeCount();
+  });
+}
+
+// MAHOGANY BACK PROJECT
+
+
+
+
+
+
+
 
 // Date Countdown
 const countDownDate = new Date('June 27, 2022 18:52:25').getTime(); // End Date
 const daysLeft = document.getElementById('daysLeft');
 
-const x = setInterval (function() {
+const x = setInterval(function () {
   const todaysDate = new Date().getTime(); // Todays Date
   let countDown = countDownDate - todaysDate;
 

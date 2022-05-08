@@ -59,7 +59,7 @@
         </p>
 
         <div class="mastercraft__footer">
-          <button class="btn btn--primary btn--lrg" data-backProject="">Back this project</button>
+          <button class="btn btn--primary btn--lrg" data-open="selectReward">Back this project</button>
           <img class="mastercraft__bookmark" src="./images/icon-bookmark.svg"
             alt="Bookmark Mastercraft bamboo monitor riser">
         </div>
@@ -70,7 +70,7 @@
         <div class="backers__inner-wrapper">
           <div>
             <header class="backers__header">
-              <h2 class="backers__total">$89,914</h2>
+              <h2 id="amountBacked" class="backers__total">0</h2>
             </header>
             <p class="backers__subheader">of $100,000 backed</p>
             <hr class="backers__rule">
@@ -136,7 +136,7 @@
 
             <div class="card__flex-wrapper">
               <header class="card__header">
-                <h3 class="card__products-num card__products-num--big">101</h3>
+                <h3 class="card__products-num card__products-num--big" data-bambooAmountLeft="">101</h3>
                 <span class="card__products-left">left</span>
               </header>
 
@@ -165,7 +165,7 @@
 
             <div class="card__flex-wrapper">
               <header class="card__header">
-                <h3 class="card__products-num card__products-num--big">64</h3>
+                <h3 class="card__products-num card__products-num--big" data-blackEditionAmountLeft="">64</h3>
                 <span class="card__products-left">left</span>
               </header>
 
@@ -258,7 +258,7 @@
         </p>
 
         <header class="card__header">
-          <h3 class="card__products-num card__products-num--small">101</h3>
+          <h3 class="card__products-num card__products-num--small" data-bambooAmountLeft="">101</h3>
           <span class="card__products-left">left</span>
         </header>
       </div>
@@ -267,8 +267,8 @@
         <div class="card--popup__flex-wrapper">
           <p class="card--popup__description">Enter your pledge</p>
           <label for="card--popup__pledge-amount">
-            <input class="card--popup__input" type="number" name="pledge-amount" placeholder="$25">
-            <button class="btn btn--primary btn--sm" data-open="thankYou" data-close="selectReward" data-backProject="">Continue</button>
+            <input id="bambooInput" class="card--popup__input" type="text" name="card--popup__pledge-amount" placeholder="$25" data-input="">
+            <button class="btn btn--primary btn--sm" data-open="thankYou" data-close="selectReward" data-backBambooProject="">Continue</button>
           </label>
         </div>
       </div>
@@ -292,7 +292,7 @@
         </p>
 
         <header class="card__header">
-          <h3 class="card__products-num card__products-num--small">64</h3>
+          <h3 class="card__products-num card__products-num--small" data-blackEditionAmountLeft="">64</h3>
           <span class="card__products-left">left</span>
         </header>
       </div>
@@ -301,8 +301,8 @@
         <div class="card--popup__flex-wrapper">
           <p class="card--popup__description">Enter your pledge</p>
           <label for="card--popup__pledge-amount">
-            <input class="card--popup__input" type="number" name="pledge-amount" id="pledgeAmount" placeholder="$75">
-            <button class="btn btn--primary btn--sm" data-open="thankYou" data-close="selectReward" data-backProject="">Continue</button>
+            <input id="blackEditionInput" class="card--popup__input" type="text" name="card--popup__pledge-amount"  placeholder="$75" data-input="">
+            <button class="btn btn--primary btn--sm" data-open="thankYou" data-close="selectReward" data-backBlackEditionProject="">Continue</button>
           </label>
         </div>
       </div>
