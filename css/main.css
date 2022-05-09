@@ -145,7 +145,8 @@
 
 .progress-bar__bg {
   background-color: var(--clr-accent);
-  width: 75%;
+  width: 0;
+  max-width: 100%;
   height: 0.75em;
   border-radius: 33.5px;
 }

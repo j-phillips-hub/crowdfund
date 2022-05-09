@@ -82,11 +82,6 @@ for (const input of backProjectInputs) {
   });
 }
 
-
-
-
-// ADD DISABLED STATE ON 0 LEFT,, ADD MAHOGANY COUNT
-
 // BAMBOO BACK PROJECT
 const bambooPrizesLeft = '[data-bambooAmountLeft]';
 const allBambooPrizesLeft = document.querySelectorAll(bambooPrizesLeft);
@@ -116,6 +111,12 @@ const bambooButtons = document.querySelectorAll(backBambooProject);
 const amountBacked = document.getElementById('amountBacked');
 const totalBackers = document.getElementById('totalBackers');
 let count = parseInt(totalBackers.innerHTML.replace(',', ''));
+const progressBar = document.getElementById('progressBar');
+
+function progressBarStep() {
+  let width = parseInt(amountBacked.innerHTML) * 0.001;
+  progressBar.style.width = width + '%';
+}
 
 for (const elm of bambooButtons) {
   elm.addEventListener('click', function () {
@@ -127,6 +128,7 @@ for (const elm of bambooButtons) {
     amountBacked.innerHTML = totalBacked;
 
     subBambooPrizeCount();
+    progressBarStep();
   });
 }
 
@@ -166,6 +168,7 @@ for (const elm of blackEditionButtons) {
     amountBacked.innerHTML = totalBacked;
 
     subBlackEditionPrizeCount();
+    progressBarStep();
   });
 }
 
@@ -205,13 +208,9 @@ for (const elm of mahoganyButtons) {
     amountBacked.innerHTML = totalBacked;
 
     subMahoganyPrizeCount();
+    progressBarStep();
   });
 }
-
-
-
-
-
 
 // Date Countdown
 const countDownDate = new Date('June 27, 2022 18:52:25').getTime(); // End Date
