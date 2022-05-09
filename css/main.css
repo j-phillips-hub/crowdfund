@@ -51,8 +51,9 @@
 .nav__list {display: none;}
 
 .nav__list-link {
-  font-weight: 500;
   color: var(--clr-white);
+  font-size: 0.8125rem;
+  font-weight: 500;
 }
 
 .nav__list-rule {
@@ -67,8 +68,9 @@
 /* -------------------------------------------------------------------------- */
 .mastercraft {
   background-color: var(--clr-white);
+  max-width: 730px;
   padding: 0 1.5rem 2.5rem;
-  margin: -58px 0 1.5rem;
+  margin: -58px auto 1.5rem;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.0497193);
   border-radius: 8px;
@@ -83,7 +85,7 @@
 }
 
 .mastercraft__title {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
   width: 97%;
   margin: 0 auto 1rem;
 }
@@ -106,9 +108,10 @@
 /* -------------------------------------------------------------------------- */
 .backers {
   background-color: var(--clr-white);
+  max-width: 730px;
   text-align: center;
   padding: 32px 24px 40px;
-  margin-bottom: 24px;
+  margin: 0 auto 1.5rem;
   border: 1px solid rgba(0, 0, 0, 0.0497193);
   border-radius: 8px;
 }
@@ -117,6 +120,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .backers__header {margin-bottom: 9px;}
@@ -137,10 +141,12 @@
 
 .progress-bar {
   width: 100%;
+  max-width: 634px;
   height: 0.75em;
   border-radius: 33.5px;
   background-color: hsla(0, 0%, 18%, 0.05);
   mix-blend-mode: normal;
+  margin: 0 auto;
 }
 
 .progress-bar__bg {
@@ -156,12 +162,15 @@
 /* -------------------------------------------------------------------------- */
 .about__header {margin-bottom: 1.5rem;}
 
-.about__title{font-size: 1.125rem;}
+.about__title{font-size: clamp(1.125rem, 4vw, 1.25rem);}
 
-.about__description {margin-bottom: 2.1875rem;}
+.about__description {
+  max-width: 634px;
+  margin-bottom: 2.1875rem;
+}
 
 .card {
-  background-color: transparent;
+  background-color: white;
   padding: 1.5rem;
   margin-top: 1.5rem;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -174,9 +183,9 @@
   gap: 0.5rem;
 }
 
-.card__title {font-size: 0.875rem;}
+.card__title {font-size:clamp(0.875rem, 3vw, 1.125rem) ;}
 
-.card__pledge {
+.card__amount {
   color: var(--clr-accent);
   font-weight: 500;
 }
@@ -208,6 +217,7 @@
 /* -------------------------------------------------------------------------- */
 .back-project {
   margin: 0 1.5rem;
+  max-width: 730px;
   position: absolute;
   transition: all 0.35s ease-in;
   top: 120px;
@@ -218,7 +228,6 @@
   visibility: hidden;
   opacity: 0;
   border-radius: 8px;
-  /* overflow: hidden; */
 }
 
 [data-animation='zoomInOut'] {transform: scale(0.2);}
@@ -282,6 +291,7 @@
 .card__products-num--small {font-size: 1.125rem;}
 
 .card--pledge {
+  position: relative;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -296,13 +306,11 @@
 
 .card--popup-visible {display: block;}
 
-.card--popup__description {text-align: center;}
-
 .card--popup__flex-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   gap: 1rem;
+  text-align: center;
 }
 
 .card--popup__input {
@@ -325,7 +333,8 @@
 /* -------------------------------------------------------------------------- */
 
 .thankyou {
-  background-color: var(--clr-white);
+  max-width: 540px;
+  margin: 0 auto;
   text-align: center;
   padding: 32px 24px 40px;
   position: absolute;

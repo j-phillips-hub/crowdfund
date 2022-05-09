@@ -73,27 +73,27 @@
               <h2 id="amountBacked" class="backers__total">0</h2>
             </header>
             <p class="backers__subheader">of $100,000 backed</p>
-            <hr class="backers__rule">
+            
           </div>
-
+          <hr class="backers__rule">
           <div>
             <header class="backers__header">
               <h2 id="totalBackers" class="backers__total">0</h2>
             </header>
             <p class="backers__subheader">total backers</p>
-            <hr class="backers__rule">
+            
           </div>
-
+          <hr class="backers__rule">
           <div>
             <header class="backers__header">
               <h2 id="daysLeft" class="backers__total"></h2>
             </header>
             <p class="backers__subheader">days left</p>
           </div>
+        </div>
 
-          <div class="progress-bar">
-            <div id="progressBar" class="progress-bar__bg"></div>
-          </div>
+        <div class="progress-bar">
+          <div id="progressBar" class="progress-bar__bg"></div>
         </div>
       </section>
 
@@ -124,7 +124,7 @@
               </header>
 
               <div>
-                <p class="card__pledge">Pledge $25 or more</p>
+                <p class="card__amount">Pledge $25 or more</p>
               </div>
             </div>
 
@@ -153,7 +153,7 @@
               </header>
 
               <div>
-                <p class="card__pledge">Pledge $75 or more</p>
+                <p class="card__amount">Pledge $75 or more</p>
               </div>
             </div>
 
@@ -182,7 +182,7 @@
               </header>
 
               <div>
-                <p class="card__pledge">Pledge $200 or more</p>
+                <p class="card__amount">Pledge $200 or more</p>
               </div>
             </div>
 
@@ -220,18 +220,18 @@
         Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
       </p>
 
-      <div class="card">
+      <div class="card card--pledge">
         <div class="card__flex-wrapper">
           <header class="card__header">
             <label class="card__label" for="pledge">
               <input type="radio" class="card__radio" name="pledge" checked>
             </label>
-
+            
             <h2 class="card__title">Pledge with no reward</h2>
           </header>
         </div>
 
-        <p class="card__description">
+        <p class="card__description card--pledge__description">
           Choose to support us without a reward if you simply
           believe in our project. As a backer, you will be
           signed up to receive product updates via email.
@@ -246,18 +246,18 @@
             </label>
             <div class="card__inner-flex">
               <h2 class="card__title">Bamboo Stand</h2>
-              <p class="card__pledge">Pledge $25 or more</p>
+              <p class="card__amount">Pledge $25 or more</p>
             </div>
           </header>
         </div>
 
-        <p class="card__description">
+        <p class="card__description card--pledge__description">
           You get an ergonomic stand made of natural bamboo.
           You've helped us launch our promotional campaign,
           and you’ll be added to a special Backer member list.
         </p>
 
-        <header class="card__header">
+        <header class="card__header card__header--desktop">
           <h3 class="card__products-num card__products-num--small" data-bambooAmountLeft="">101</h3>
           <span class="card__products-left">left</span>
         </header>
@@ -281,17 +281,17 @@
             </label>
             <div class="card__inner-flex">
               <h2 class="card__title">Black Edition Stand</h2>
-              <p class="card__pledge">Pledge $75 or more</p>
+              <p class="card__amount">Pledge $75 or more</p>
             </div>
           </header>
         </div>
 
-        <p class="card__description">
+        <p class="card__description card--pledge__description">
           You get a Black Special Edition computer stand and a personal thank you You’ll be added to our Backer member
           list. Shipping is included.
         </p>
 
-        <header class="card__header">
+        <header class="card__header card__header--desktop">
           <h3 class="card__products-num card__products-num--small" data-blackEditionAmountLeft="">64</h3>
           <span class="card__products-left">left</span>
         </header>
@@ -315,18 +315,18 @@
             </label>
             <div class="card__inner-flex">
               <h2 class="card__title">Mahogany Special Edition</h2>
-              <p class="card__pledge">Pledge $200 or more</p>
+              <p class="card__amount">Pledge $200 or more</p>
             </div>
           </header>
         </div>
 
-        <p class="card__description">
+        <p class="card__description card--pledge__description">
           You get two Special Edition Mahogany stands, a Backer T-Shirt,
           and a personal thank you. You’ll be added to our Backer member
           list. Shipping is included.
         </p>
 
-        <header class="card__header">
+        <header class="card__header card__header--desktop">
           <h3 class="card__products-num card__products-num--small" data-mahoganyAmountLeft="">1</h3>
           <span class="card__products-left">left</span>
         </header>
@@ -346,7 +346,7 @@
 
   <!-- Thankyou modal start -->
   <section id="thankYou" class="thankyou" data-animation="zoomInOut">
-    <div class="card">
+    <div class="card card--thankyou">
       <img src="./images/icon-check.svg" alt="" loading="lazy">
 
       <header class="thankyou__header">

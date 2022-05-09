@@ -8,6 +8,7 @@
   --clr-hr: hsla(0, 0%, 0%, .15);
   --clr-dark-gray: hsl(0, 0%, 18%);
   --clr-white: hsl(0, 0%, 100%);
+  /* --clr-btn-hover: hsl(195, 100%, 50%); */
 }
 
 *,
@@ -21,7 +22,7 @@
 body {
   background-color: var(--clr-body);
   font-family: 'Commissioner', sans-serif;
-  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 3vw, 1rem);
 }
 
 main {margin: 0 1.5rem;}
@@ -45,6 +46,8 @@ input::-webkit-inner-spin-button {-webkit-appearance: none;}
 input[type="number"] {-moz-appearance: textfield;}
 
 .container {
+  max-width: 730px;
+  margin: 0 auto;
   padding: 40px 24px 16px;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.0497193);

@@ -1,0 +1,75 @@
+@media screen and (min-width: 768px) {
+  .hero {background-image: url('../images/image-hero-desktop.jpg');}
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-toggle__label {display: none;}
+
+  .nav__list {
+    display: flex;
+    gap: 2.0625rem;
+  }
+
+  .mastercraft__footer {justify-content: space-around;}
+
+  .backers__inner-wrapper {
+    flex-direction: row;
+    padding-left: 1.625rem;
+    gap: 2.625rem;
+  }
+
+  .backers__rule {
+    margin: 0;
+    width: 0;
+  }
+
+  .card {padding: 38px 32px 0;}
+
+  .card__flex-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card__inner-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card__header--desktop {
+    display: flex;
+    align-items: center; 
+    gap: 8px;
+    position: absolute;
+    top: 1.125rem;
+    right: 1.75rem;
+  }
+
+  .back-project {
+    top: initial;
+    margin: 0 auto;
+  }
+
+  .container {padding: 48px;}
+
+  .card--pledge {padding: 38px 32px 32px;}
+
+  .card--pledge__description {margin-left: 44px;}
+
+  .card--popup {padding: 24px 28px;}
+
+  .card--popup__flex-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .thankyou {top: 300px;}
+
+  .card--thankyou {padding: 48px;}
+}
