@@ -1,3 +1,5 @@
+const bookmark = document.getElementById('bookmark');
+const bookmarked = document.getElementById('bookmarked');
 const modalOpen = '[data-open]';
 const modalClose = '[data-close]';
 const openModal = document.querySelectorAll(modalOpen);
@@ -11,6 +13,11 @@ const blackEditionRadio = document.getElementById('blackEditionRadio');
 const blackEditionPopup = document.getElementById('blackEditionPopup');
 const mahoganyRadio = document.getElementById('mahoganyRadio');
 const mahoganyPopup = document.getElementById('mahoganyPopup');
+
+// Bookmark Animation
+bookmark.addEventListener('click', function() {
+  bookmarked.classList.toggle('bookmarked');
+})
 
 // Opens pledge container
 for (const elm of openModal) {
@@ -227,5 +234,3 @@ const x = setInterval(function () {
   const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
   document.getElementById('daysLeft').innerHTML = days;
 }, 1000);
-
-

@@ -60,9 +60,20 @@
 
         <div class="mastercraft__footer">
           <button class="btn btn--primary btn--lrg" data-open="selectReward">Back this project</button>
-          <img class="mastercraft__bookmark" src="./images/icon-bookmark.svg"
-            alt="Bookmark Mastercraft bamboo monitor riser">
+
+          <div id="bookmarked" class="mastercraft__bookmark">
+            <div>
+              <img id="bookmark" class="mastercraft__bookmark-img" src="./images/icon-bookmark.svg"
+              alt="Bookmark Mastercraft bamboo monitor riser">
+            </div>
+      
+            <div>
+              <p id="bookmarkedPar" class="bookmarked__par">Bookmarked</p>
+            </div>
+          </div>
+         
         </div>
+        
       </section>
 
       <!-- Backers -->
@@ -213,14 +224,14 @@
     <div class="container">
       <header class="back-project__header">
         <h2 class="back-project__title">Back this project</h2>
-        <img class="back-project__close" src="./images/icon-close-modal.svg" alt="Close Modal"
-          data-close="selectReward">
+        <img class="back-project__close" src="./images/icon-close-modal.svg"
+         alt="Close Back Project" data-close="selectReward">
       </header>
       <p class="back-project__description">
         Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
       </p>
 
-      <div class="card card--pledge">
+      <div class="card card--pledge" data-pledgeCard="">
         <div class="card__flex-wrapper">
           <header class="card__header">
             <label class="card__label" for="pledge">

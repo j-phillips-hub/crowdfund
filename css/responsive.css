@@ -1,4 +1,8 @@
 @media screen and (min-width: 768px) {
+  .btn:hover {
+    background-color: var(--clr-dark-cyan);
+  }
+
   .hero {background-image: url('../images/image-hero-desktop.jpg');}
 
   .nav {
@@ -50,7 +54,7 @@
   }
 
   .back-project {
-    top: initial;
+    top: 145px;
     margin: 0 auto;
   }
 

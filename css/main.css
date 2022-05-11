@@ -56,6 +56,13 @@
   font-weight: 500;
 }
 
+.nav__list-link:focus {
+  outline: none;
+  text-decoration: underline 1px solid var(--clr-white);
+}
+
+.nav__list-link:hover {text-decoration: underline 1px solid var(--clr-white);}
+
 .nav__list-rule {
   background-color: var(--clr-dark-gray);
   margin: 1.5rem 0;
@@ -67,6 +74,7 @@
 /*                         STARTS MASTERCRAFT SECTION                        */
 /* -------------------------------------------------------------------------- */
 .mastercraft {
+  position: relative;
   background-color: var(--clr-white);
   max-width: 730px;
   padding: 0 1.5rem 2.5rem;
@@ -98,9 +106,32 @@
   margin-top: 1.5rem;
 }
 
-.mastercraft__bookmark {
+.mastercraft__bookmark {display: flex;}
+
+.mastercraft__bookmark-img {
   width: 3.5rem;
   height: 3.5rem;
+}
+
+.mastercraft__bookmark__img:hover {cursor: pointer;}
+
+.bookmarked__par {
+  color: var(--clr-white);
+  font-size: 0.875rem;
+}
+
+.bookmarked {
+  display: none;
+  color: var(--clr-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray;
+  border-radius: 33.5px;
+  width: 174px;
+  height: 56px;
+  padding-right: 20px;
+  transition: all ease-in-out 0.4s;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -280,6 +311,11 @@
 }
 
 .card__radio:checked::before {transform: scale(1);}
+
+.card__radio:focus {
+  outline: none;
+  border: 1px solid var(--clr-accent);
+}
 
 .card__inner-flex {
   display: flex;

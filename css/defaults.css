@@ -40,10 +40,10 @@ p {
   line-height: 171%;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {-webkit-appearance: none;}
-
-input[type="number"] {-moz-appearance: textfield;}
+input[type="text"]:focus {
+  outline: none;
+  border: 1px solid var(--clr-accent);
+}
 
 .container {
   max-width: 730px;
@@ -58,6 +58,12 @@ input[type="number"] {-moz-appearance: textfield;}
   border: none;
   border-radius: 2.09375rem;
   font-weight: 700;
+  transition: all ease-in-out 0.2s;
+}
+
+.btn:focus {
+  outline: none;
+  border: 2px solid var(--clr-dark-cyan);
 }
 
 .btn:not(:disabled):not(.btn--disabled),
