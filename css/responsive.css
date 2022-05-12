@@ -17,6 +17,11 @@
     gap: 2.0625rem;
   }
 
+  .nav__list-rule {
+    width: 0;
+    height: 0;
+  }
+
   .mastercraft__footer {justify-content: space-around;}
 
   .backers__inner-wrapper {
