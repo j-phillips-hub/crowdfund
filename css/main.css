@@ -1,8 +1,4 @@
-.hero {
-  background-image: url('../images/image-hero-mobile.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 /* -------------------------------------------------------------------------- */
 /*                              STARTS TOGGLE NAV                             */
@@ -24,6 +20,11 @@
   font-size: 1.125rem;
   color: var(--clr-black);
   margin-left: 1.5rem;
+}
+
+.nav-toggle__img {
+  width: 1rem;
+  height: 1rem;
 }
 
 /* -------------------------------------------------------------------------- */
