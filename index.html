@@ -23,9 +23,9 @@
       <input type="checkbox" name="nav-toggle" id="navToggle" class="nav-toggle">
 
       <nav class="nav">
-        <img class="nav__logo" src="./images/logo.svg" alt="Crowdfund">
+        <img class="nav__logo" src="./images/logo.svg" alt="Mastercraft">
 
-        <ul class="nav__list" id="navList">
+        <ul id="navList" class="nav__list">
           <li class="nav__list-item">
             <a class="nav__list-link" href="#">About</a>
           </li>
@@ -47,7 +47,7 @@
 
     <main id="main">
       <!-- Master Craft -->
-      <section class="mastercraft">
+      <section class="mastercraft br-8">
         <img class="mastercraft__logo" src="./images/logo-mastercraft.svg" alt="">
 
         <header class="mastercraft__header">
@@ -61,14 +61,12 @@
         <div class="mastercraft__footer">
           <button class="btn btn--primary btn--lrg" data-open="selectReward">Back this project</button>
 
-          <div id="bookmarked" class="bookmark">
+          <div id="bookmarked" class="bookmark br-33">
             <div>
-              <img id="bookmark" class="bookmark__img" src="./images/icon-bookmark.svg"
-              alt="Bookmark Mastercraft bamboo monitor riser">
+              <img id="bookmark" class="bookmark__img" src="./images/icon-bookmark.svg" alt="Bookmark Mastercraft bamboo monitor riser">
             </div>
             <div>
-              <img id="bookmarkCyan" class="bookmark__img bookmark__img--cyan" src="./images/icon-bookmark-cyan.svg"
-              alt="Bookmark Mastercraft bamboo monitor riser">
+              <img id="bookmarkCyan" class="bookmark__img bookmark__img--cyan" src="./images/icon-bookmark-cyan.svg" alt="Bookmark Mastercraft bamboo monitor riser">
             </div>
             <div>
               <p id="bookmarkedPar" class="bookmark__par">Bookmarked</p>
@@ -78,24 +76,26 @@
       </section>
 
       <!-- Backers -->
-      <section class="backers">
+      <section class="backers br-8">
         <div class="backers__inner-wrapper">
           <div>
             <header class="backers__header">
               <h2 id="amountBacked" class="backers__total">0</h2>
             </header>
             <p class="backers__subheader">of $100,000 backed</p>
-            
+
           </div>
           <hr class="backers__rule">
+
           <div>
             <header class="backers__header">
               <h2 id="totalBackers" class="backers__total">0</h2>
             </header>
             <p class="backers__subheader">total backers</p>
-            
           </div>
+
           <hr class="backers__rule">
+
           <div>
             <header class="backers__header">
               <h2 id="daysLeft" class="backers__total"></h2>
@@ -104,8 +104,8 @@
           </div>
         </div>
 
-        <div class="progress-bar">
-          <div id="progressBar" class="progress-bar__bg"></div>
+        <div class="progress-bar br-33">
+          <div id="progressBar" class="progress-bar__bg br-33"></div>
         </div>
       </section>
 
@@ -182,7 +182,8 @@
               </header>
 
               <div>
-                <button id="blackEditionRewardBtn" class="btn btn--primary btn--md" type="submit" data-open="selectReward">Select Reward</button>
+                <button id="blackEditionRewardBtn" class="btn btn--primary btn--md" type="submit"
+                  data-open="selectReward">Select Reward</button>
               </div>
             </div>
           </div>
@@ -221,12 +222,11 @@
   </div>
 
   <!-- Selection modal start -->
-  <section id="selectReward" class="back-project" data-animation="zoomInOut">
+  <section id="selectReward" class="back-project br-8" data-animation="zoomInOut">
     <div class="container">
       <header class="back-project__header">
         <h2 class="back-project__title">Back this project</h2>
-        <img class="back-project__close" src="./images/icon-close-modal.svg"
-         alt="Close Back Project" data-close="selectReward">
+        <img class="back-project__close" src="./images/icon-close-modal.svg" alt="Close Back Project" data-close="selectReward" loading="lazy">
       </header>
       <p class="back-project__description">
         Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
@@ -238,7 +238,7 @@
             <label class="card__label" for="pledge">
               <input type="radio" class="card__radio" name="pledge" checked>
             </label>
-            
+
             <h2 class="card__title">Pledge with no reward</h2>
           </header>
         </div>
@@ -279,7 +279,7 @@
         <div class="card--popup__flex-wrapper">
           <p class="card--popup__description">Enter your pledge</p>
           <label for="card--popup__pledge-amount">
-            <input id="bambooInput" class="card--popup__input" type="text" name="card--popup__pledge-amount" placeholder="$25" data-input="">
+            <input id="bambooInput" class="card--popup__input br-33" type="text" name="card--popup__pledge-amount" placeholder="$25" data-input="">
             <button class="btn btn--primary btn--sm" data-open="thankYou" data-close="selectReward" data-backBambooProject="">Continue</button>
           </label>
         </div>
@@ -313,7 +313,7 @@
         <div class="card--popup__flex-wrapper">
           <p class="card--popup__description">Enter your pledge</p>
           <label for="card--popup__pledge-amount">
-            <input id="blackEditionInput" class="card--popup__input" type="text" name="card--popup__pledge-amount"  placeholder="$75" data-input="">
+            <input id="blackEditionInput" class="card--popup__input br-33" type="text" name="card--popup__pledge-amount" placeholder="$75" data-input="">
             <button class="btn btn--primary btn--sm" data-open="thankYou" data-close="selectReward" data-backBlackEditionProject="">Continue</button>
           </label>
         </div>
@@ -348,7 +348,7 @@
         <div class="card--popup__flex-wrapper">
           <p class="card--popup__description">Enter your pledge</p>
           <label for="card--popup__pledge-amount">
-            <input id="mahoganyInput" class="card--popup__input" type="text" name="pledge-amount" placeholder="$200" data-input="">
+            <input id="mahoganyInput" class="card--popup__input br-33" type="text" name="pledge-amount" placeholder="$200" data-input="">
             <button class="btn btn--primary btn--sm" data-open="thankYou" data-close="selectReward" data-backMahoganyProject="">Continue</button>
           </label>
         </div>

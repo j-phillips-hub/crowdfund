@@ -30,7 +30,7 @@
     width: 0;
   }
 
-  .card {padding: 38px 32px 0;}
+  .card {padding: 2.375rem 2rem 0;}
 
   .card__flex-wrapper {
     flex-direction: row;
@@ -45,26 +45,26 @@
   }
 
   .card__header--desktop {
-    display: flex;
-    align-items: center; 
-    gap: 8px;
     position: absolute;
     top: 1.125rem;
     right: 1.75rem;
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem;
   }
 
   .back-project {
-    top: 145px;
+    top: 9.0625rem;
     margin: 0 auto;
   }
 
-  .container {padding: 48px;}
+  .container {padding: 3rem;}
 
-  .card--pledge {padding: 38px 32px 32px;}
+  .card--pledge {padding: 2.375rem 2rem 2rem;}
 
-  .card--pledge__description {margin-left: 44px;}
+  .card--pledge__description {margin-left: 2.75rem;}
 
-  .card--popup {padding: 24px 28px;}
+  .card--popup {padding: 1.5rem 1.75rem;}
 
   .card--popup__flex-wrapper {
     flex-direction: row;
@@ -73,7 +73,7 @@
     gap: 0;
   }
 
-  .thankyou {top: 300px;}
+  .thankyou {top: 18.75rem;}
 
-  .card--thankyou {padding: 48px;}
+  .card--thankyou {padding: 3rem;}
 }
