@@ -21,6 +21,7 @@
 }
 
 .nav-toggle:checked ~ .nav .nav__list-link {
+  font-size: 1.125rem;
   color: var(--clr-black);
   margin-left: 1.5rem;
 }
