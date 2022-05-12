@@ -1,5 +1,7 @@
 const bookmark = document.getElementById('bookmark');
+const bookmarkCyan = document.getElementById('bookmarkCyan');
 const bookmarked = document.getElementById('bookmarked');
+const bookmarkedPar = document.getElementById('bookmarkedPar');
 const modalOpen = '[data-open]';
 const modalClose = '[data-close]';
 const openModal = document.querySelectorAll(modalOpen);
@@ -13,11 +15,33 @@ const blackEditionRadio = document.getElementById('blackEditionRadio');
 const blackEditionPopup = document.getElementById('blackEditionPopup');
 const mahoganyRadio = document.getElementById('mahoganyRadio');
 const mahoganyPopup = document.getElementById('mahoganyPopup');
+const mediaQueryDesktop = window.matchMedia('(min-width: 768px)');
+const mediaQueryMobile = window.matchMedia('(max-width: 768px)');
 
 // Bookmark Animation
 bookmark.addEventListener('click', function() {
-  bookmarked.classList.toggle('bookmarked');
-})
+  if (mediaQueryDesktop.matches) {
+    bookmarked.classList.toggle('bookmarked');
+    bookmarkedPar.classList.toggle('bookmarked__par--hidden');
+    bookmark.classList.add('bookmark__img--hidden');
+    bookmarkCyan.classList.add('bookmark__img--cyan-visible');
+  } else if (mediaQueryMobile.matches) {
+    bookmark.classList.add('bookmark__img--hidden');
+    bookmarkCyan.classList.add('bookmark__img--cyan-visible');
+  }
+});
+
+bookmarkCyan.addEventListener('click', function() {
+  if (mediaQueryDesktop.matches) {
+    bookmarked.classList.toggle('bookmarked');
+    bookmarkedPar.classList.toggle('bookmarked__par--hidden');
+    bookmark.classList.remove('bookmark__img--hidden');
+    bookmarkCyan.classList.remove('bookmark__img--cyan-visible');
+  } else if (mediaQueryMobile.matches) {
+    bookmark.classList.remove('bookmark__img--hidden');
+    bookmarkCyan.classList.remove('bookmark__img--cyan-visible');
+  }
+});
 
 // Opens pledge container
 for (const elm of openModal) {

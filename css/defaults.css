@@ -8,7 +8,7 @@
   --clr-hr: hsla(0, 0%, 0%, .15);
   --clr-dark-gray: hsl(0, 0%, 18%);
   --clr-white: hsl(0, 0%, 100%);
-  /* --clr-btn-hover: hsl(195, 100%, 50%); */
+  --clr-bookmark-bg: 	hsla(176, 72%, 28%, 0.1);
 }
 
 *,
