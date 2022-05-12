@@ -3,7 +3,7 @@
     background-color: var(--clr-dark-cyan);
   }
 
-  .hero {background-image: url('../images/image-hero-desktop.jpg');}
+  .hero {background-image: url('../assets/images/image-hero-desktop.jpg');}
 
   .nav {
     display: flex;
