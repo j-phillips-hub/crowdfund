@@ -19,27 +19,6 @@
   padding: 0;
 }
 
-@font-face {
-  font-family:"commissioner";
-  src: url("../assets/fonts/Commissioner-Regular.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family:"commissioner";
-  src: url("../assets/fonts/Commissioner-Medium.ttf") format("ttf");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family:"commissioner";
-  src: url("../assets/fonts/Commissioner-Bold.ttf") format("ttf");
-  font-weight: 700;
-  font-style: normal;
-}
-
 [data-animation='zoomInOut'] {transform: scale(0.2);}
 
 [data-animation='zoomInOut'].is-visible {transform: none;}
@@ -47,7 +26,6 @@
 body {
   background-color: var(--clr-body);
   font-family: 'Commissioner', sans-serif;
-  font-weight: 400;
   font-size: clamp(0.875rem, 3vw, 1rem);
 }
 
