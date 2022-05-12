@@ -244,7 +244,7 @@ for (const elm of mahoganyButtons) {
 }
 
 // Date Countdown
-const countDownDate = new Date('June 27, 2022 18:52:25').getTime(); // End Date
+const countDownDate = new Date('July 07, 2022 18:52:25').getTime(); // End Date
 const daysLeft = document.getElementById('daysLeft');
 
 const x = setInterval(function () {
