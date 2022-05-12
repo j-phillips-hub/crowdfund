@@ -320,9 +320,14 @@
   max-width: 6.25rem;
   height: 3rem;
   max-height: 3rem;
-  margin-right: 1rem;
   padding-left: 1.5rem;
   border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.card--popup__inner-flex {
+  display: flex;
+  justify-content: center;
+  gap: 0.9375rem;
 }
 
 /* -------------------------------------------------------------------------- */

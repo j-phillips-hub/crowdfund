@@ -69,9 +69,16 @@
   .card--popup__flex-wrapper {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 0;
   }
+
+  .card--popup__input {
+    margin-right: 1rem;
+    margin-left: 11.9375rem;
+  }
+
+  .card--popup__inner-flex {gap: 0;}
 
   .thankyou {top: 18.75rem;}
 
