@@ -32,6 +32,7 @@
        url('../assets/fonts/commissioner-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('../assets/fonts/commissioner-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../assets/fonts/commissioner-v11-latin-regular.svg#Commissioner') format('svg'); /* Legacy iOS */
+  font-display: swap;
 }
 
 /* commissioner-500 - latin */
@@ -46,6 +47,7 @@
        url('../assets/fonts/commissioner-v11-latin-500.woff') format('woff'), /* Modern Browsers */
        url('../assets/fonts/commissioner-v11-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../assets/fonts/commissioner-v11-latin-500.svg#Commissioner') format('svg'); /* Legacy iOS */
+  font-display: swap;
 }
 
 /* commissioner-700 - latin */
@@ -60,6 +62,7 @@
        url('../assets/fonts/commissioner-v11-latin-700.woff') format('woff'), /* Modern Browsers */
        url('../assets/fonts/commissioner-v11-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../assets/fonts/commissioner-v11-latin-700.svg#Commissioner') format('svg'); /* Legacy iOS */
+  font-display: swap;
 }
 
 
