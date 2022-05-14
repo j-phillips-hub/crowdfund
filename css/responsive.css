@@ -6,13 +6,19 @@
   .hero {background-image: url('../assets/images/image-hero-desktop.jpg');}
 
   .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .nav-toggle__label {display: none;}
 
   .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 2.0625rem;
   }
@@ -22,10 +28,13 @@
     height: 0;
   }
 
-  .mastercraft__footer {justify-content: space-around;}
+  .mastercraft__footer {-ms-flex-pack: distribute;justify-content: space-around;}
 
   .backers__inner-wrapper {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     padding-left: 1.625rem;
     gap: 2.625rem;
   }
@@ -38,14 +47,26 @@
   .card {padding: 2.375rem 2rem 0;}
 
   .card__flex-wrapper {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .card__inner-flex {
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 1rem;
   }
 
@@ -53,8 +74,12 @@
     position: absolute;
     top: 1.125rem;
     right: 1.75rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center; 
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; 
     gap: 0.5rem;
   }
 
@@ -72,9 +97,16 @@
   .card--popup {padding: 1.5rem 1.75rem;}
 
   .card--popup__flex-wrapper {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     gap: 0;
   }
 
