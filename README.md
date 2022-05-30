@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://mycrowdfund.netlify.app/]
+- Live Site URL: [https://jordanphillips-hub.github.io/crowdfund/]
 
 ### Built with
 
