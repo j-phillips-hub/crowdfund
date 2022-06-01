@@ -4,14 +4,11 @@ This is a solution to the [Crowdfunding product page challenge on Frontend Mento
 
 ## Table of contents
 
-  - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
   - [Built with](#built-with)
   - [Author](#author)
-
-## Overview
 
 ### The challenge
 
@@ -34,12 +31,9 @@ Users should be able to:
 
 ### Built with
 
-- HTML5
+- HTML
 - CSS
 - JavaScript
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
 
 ## Author
 
