@@ -84,6 +84,7 @@ const bambooInput = document.getElementById('bambooInput');
 const blackEditionInput = document.getElementById('blackEditionInput');
 const mahoganyInput = document.getElementById('mahoganyInput');
 let inputValue = 0.0; // Default Value
+
 function validateFloat(s) {
   RegX = /^[0-9]*\.?[0-9]*$/;
   return s.match(RegX);
@@ -215,7 +216,7 @@ for (const elm of mahoganyButtons) {
   });
 }
 // Date Countdown
-const countDownDate = new Date('dec 24, 2022 24:00:00').getTime(); // End Date
+const countDownDate = new Date('Dec 25, 2023 24:00:00').getTime(); // End Date
 const daysLeft = document.getElementById('daysLeft');
 const x = setInterval(function () {
   const todaysDate = new Date().getTime(); // Todays Date
